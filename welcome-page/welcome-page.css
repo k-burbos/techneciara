@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background-color: #B39B84;
+}
+
+@font-face {
+    font-family: Arcade;
+    src: url('../fonts/ARCADECLASSIC.TTF');
+}
+.logo {
+    border-bottom: 5px solid black;
+    margin-top: 3px;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+#mainpagepicture {
+    border-radius: 20px;
+    height: 150px;
+}
+
+.about {
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction,
+.mechanics, 
+.rules {
+    background-color: white;
+    height: 40vh;
+    width: 20vw;
+    gap: 20px;
+    margin: 20px 50px 20px 20px;
+    min-width: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.titleofabout {
+    margin: 0 0 0 5px;
+    font-size: 40px;
+    display: flex;
+    width: 40px;
+    justify-content: center;
+    padding-right: 10px;
+    text-orientation: sideways;
+    writing-mode: vertical-lr;
+    border-right: 2px solid black;
+}
+
+.textofabout {
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}

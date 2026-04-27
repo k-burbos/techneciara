@@ -11,7 +11,10 @@ begin.addEventListener('click', () => {
     if(name == '' || password == '' || confirm == '') alertUser()
     else if(password != confirm) alertFalsePassword()
     else {
-        window.open('../demo.html', '_self')
+        begin.classList.add('load')
+        setTimeout(() => {
+            window.location.href = "../welcome-page/welcome-page.html";
+        }, 200); 
     }
 })
 

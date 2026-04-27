@@ -150,3 +150,7 @@ input {
     margin-top: 5px;
     color: #FFB842;
 }
+
+#beginbttn.load {
+    cursor:wait;
+}
