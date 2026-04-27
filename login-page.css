@@ -1,0 +1,50 @@
+body {
+    justify-content: center;  
+    align-items: center;          
+    margin: 0;  
+    object-fit: cover; 
+    display: flex;
+    height: 100vh; 
+    background-image: url(images/background-login.gif);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: Arcade;
+    src: url(fonts/ARCADECLASSIC.TTF);
+}
+
+
+#business-logo {
+    min-width: 150px;  
+    min-height: auto;  
+    max-width: 100%; 
+}
+
+.login-form {
+    border: 2px solid rgba(193, 192, 192, 0.479);
+    height: 75vh;
+    min-width: 400px;
+    max-width: 35%;
+    background-color: rgba(255, 255, 255, 0.242);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 10px 10px black;
+}
+
+.welcome-message {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: Arcade;
+    font-size: clamp(30px, 2vw, 30px);
+    color: #FFB842;
+}
+
+.info-form {
+    border: 2px solid black;
+    height: 100%;
+}
