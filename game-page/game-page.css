@@ -1,0 +1,295 @@
+@font-face {
+    font-family: Arcade;
+    src: url(../fonts/ARCADECLASSIC.TTF);
+}
+
+.logo {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.436);
+    background-image: url('../images/clouds.gif');
+    box-shadow: 0 2px 20px black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.search-and-profile {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid black;
+}
+
+#profile {
+    height: 60px;
+    width: 65px;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin: 10px 350px 10px 20px;
+}
+
+.search-bar {
+    --padding: 9px;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    align-items: center;
+    background-color: #e3e2e2;
+    border-radius: 28px;
+    padding: var(--padding);
+}
+
+.search {
+    font-size: 20px;
+    font-family: Arcade;
+    border: none;
+    background: transparent;
+    margin-left: var(--padding);
+    outline: none;
+    width: 500px;
+}
+
+.game-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    width: 100%;
+}
+
+.format-side-and-game-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logoforsearch {
+    border: 2px solid black;
+    margin: 0;
+}
+
+.side-line {
+    width: 150px;
+    height: 100vh;
+    background: url(../images/mainpagepicture.gif);
+    background-size: 1000%;
+    background-position-x: -1070px;
+    background-position-y: -30px;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+}
+
+.game-card {
+    border: 2px solid rgba(0, 0, 0, 0.566);
+    border-radius: 20px;
+    height: 400px;
+    width: 450px;
+    margin: 15px 20px;
+    user-select: none;
+    box-shadow: -5px 10px 8px rgba(0, 0, 0, 0.336);
+    transition: height .5s;
+}
+
+.game-card.visible {
+    height: 420px;
+}
+
+.profile-and-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.likeThisPost {
+    cursor: pointer;
+}
+
+.likes {
+    width: 40px;
+}
+
+.selected {
+    border: 2px solid rgb(52, 133, 224);
+    border-radius: 100%;
+}
+
+.material-symbols-outlined {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.username {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.581);
+}
+
+#penTeto {
+    border: 1px solid black;
+    border-radius: 100px;
+    width: 50px;
+    margin: 10px 10px 0 20px;
+}
+
+.name {
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+}
+
+.nameofgame {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 24px;
+}
+
+.description {
+    border-radius: 20px;
+    padding: .5px 10px;
+    margin: 0 10px 5px 10px;
+    background-color: rgb(229, 226, 226);
+}
+
+.actual-game {
+    display: flex;
+    justify-content: center;
+    margin: 15px 15px 0 20px;
+    gap: 0;
+    flex-direction: column;
+    height: 250px;
+}
+
+.gamepic {
+    width: 415px;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+    transition: box-shadow .2s;
+}
+
+.interactions {
+    background-color: rgb(171, 132, 132);
+    height: 35px;
+    margin-top: -20px;
+    padding: 0;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-top: 5px;
+    width: 400px;
+    box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.255);
+}
+
+.gamepic:hover {
+    box-shadow: 0px -5px 10px rgb(114, 108, 108);
+}
+
+#dis {
+    color: black;
+    font-weight: bold;
+}
+
+#lik {
+    color: rgb(246, 172, 250);
+    font-weight: bold;
+}
+
+.message {
+    border: 2px dotted rgb(191, 49, 49);
+    height: 40px;
+    margin-top: 10px;
+    background-color: rgb(195, 87, 105);
+    border-radius: 20px;
+    padding-left: 10px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.username-and-nameofgame {
+    display: flex;
+    flex-direction: column;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.dislike {
+    width: 40px;
+}
+
+.dislikeThisPost {
+    cursor: pointer;
+}
+
+.logoofgame {
+    width: 210px;
+    display: flex;
+    justify-content: center;
+}
+
+#playcubecraft {
+    height: 25px;
+}
+
+.comments {
+    width: 40px;
+    cursor: pointer;
+}
+
+.commentsYes {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    border: 2px solid black;
+    border-radius: 20px 20px 0 0;
+    height: 400px;
+    width: 300px;
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+.bookmark {
+    width: 40px;
+}
+
+.report {
+    width: 40px;
+}
+
+.commentsInside {
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    transition: opacity .5s, transform .5s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.titleofchat {
+    background-color: rgba(228, 84, 108, 0.848);
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+    width: 263px;
+    transition: opacity .5s;
+    position: absolute;
+    top: -2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.623);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
