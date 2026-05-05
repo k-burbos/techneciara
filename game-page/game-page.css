@@ -58,8 +58,10 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 100%;
+    gap: 0;
+    margin-left:10px;
 }
 
 .format-side-and-game-card {
@@ -80,7 +82,7 @@ body {
     background-size: 1000%;
     background-position-x: -1070px;
     background-position-y: -30px;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     border: 2px solid black;
 }
 
@@ -89,14 +91,23 @@ body {
     border-radius: 20px;
     height: 400px;
     width: 450px;
-    margin: 15px 20px;
+    margin: 15px 10px;
     user-select: none;
     box-shadow: -5px 10px 8px rgba(0, 0, 0, 0.336);
-    transition: height .5s;
+    transition: height .5s, border .2s, box-shadow .2s;
 }
 
 .game-card.visible {
     height: 420px;
+}
+
+.book-mark {
+    cursor: pointer;
+    color: black;
+}
+
+.book-mark:hover {
+    color: gold;
 }
 
 .profile-and-name {
@@ -133,11 +144,16 @@ body {
     color: rgba(0, 0, 0, 0.581);
 }
 
-#penTeto {
+.penTeto {
     border: 1px solid black;
     border-radius: 100px;
     width: 50px;
     margin: 10px 10px 0 20px;
+    height:50px;
+}
+.game-card.chosen {
+    border: 2.5px solid rgb(117, 65, 117);
+    box-shadow: 0 0 5px rgb(117, 65, 117);
 }
 
 .name {
@@ -173,6 +189,7 @@ body {
 
 .gamepic {
     width: 415px;
+    height:200px;
     border-radius: 20px;
     margin: 0;
     padding: 0;
@@ -243,11 +260,16 @@ body {
 
 #playcubecraft {
     height: 25px;
+    cursor: pointer;
 }
 
 .comments {
     width: 40px;
     cursor: pointer;
+}
+
+.comments:hover {
+    color: rgb(50, 138, 138);
 }
 
 .commentsYes {
@@ -268,6 +290,11 @@ body {
 
 .report {
     width: 40px;
+    cursor: pointer;
+}
+
+.report:hover {
+    color: red;
 }
 
 .commentsInside {
@@ -293,3 +320,65 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.623);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.reported {
+    position: fixed;
+    top:30%;
+    left:40%;
+    width:300px;
+    border: 2px solid black;
+    height: 180px;
+    text-align: justify;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.536);
+    backdrop-filter: blur(8px);
+    z-index: 15000;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.black-background {
+    height:100vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    z-index:0;
+    background-color: rgba(0, 0, 0, 0.441);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s;
+}
+
+.cantReport {
+    cursor: not-allowed;
+}
+#reportedOkay {
+    background-color: rgb(77, 77, 77);
+    width:100%;
+    padding: 5px 0;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid grey;
+    box-shadow: 0 5px 0px rgb(0, 0, 0);
+    transition: box-shadow .5s, margin-top .5s, opacity .5s;
+    cursor: pointer;
+}
+
+#reportedOkay:active {
+    box-shadow: none;
+    margin-top:5px;
+}
+
+.black-background.visible {
+    pointer-events: auto;
+    z-index: 12000;
+    opacity: 1;
+}
+
+.reported.visible {
+    opacity: 1;
+}
+
+
+
