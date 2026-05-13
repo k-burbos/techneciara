@@ -1,48 +1,49 @@
 body {
-    justify-content: center;  
-    align-items: center;          
-    margin: 0;  
-    object-fit: cover; 
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    object-fit: cover;
     display: flex;
-    height: 100vh; 
-    background-image: url(../images/background-login.gif);
+    height: 100vh;
+    background-image: url(../images/background-login.png);
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     flex-direction: column;
     overflow: hidden;
     user-select: none;
 }
 
+
 @font-face {
-    font-family: Arcade;
-    src: url(../fonts/ARCADECLASSIC.TTF);
+    font-family: Economica;
+    src: url(../fonts/Economica-Regular.ttf);
+}
+
+@font-face {
+    font-family: Press;
+    src: url(../fonts/PressStart2P-Regular.ttf);
+}
+
+
+.business-logo-and-name {
+    margin-top: -100px;
 }
 
 
 #business-logo {
-    min-width: 150px;  
-    min-height: auto;  
-    max-width: 100%; 
-}
-
-.login-form {
-    border: 2px solid rgba(193, 192, 192, 0.479);
-    height: 75vh;
-    min-width: 400px;
-    max-width: 35%;
-    background-color: rgba(255, 255, 255, 0.242);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    box-shadow: 0 10px 10px black;
+    min-width: 150px;
+    min-height: auto;
+    max-width: 100%;
+    margin: 0;
 }
 
 .welcome-message {
     align-items: center;
     display: flex;
     justify-content: center;
-    font-family: Arcade;
-    font-size: clamp(30px, 2vw, 30px);
+    font-family: Press;
+    font-size: 30px;
     color: #FFB842;
 }
 
@@ -51,45 +52,53 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 20px;
+    align-items: center;
 }
+
 
 input {
     height: 50px;
     border-radius: 20px;
     padding-left: 15px;
     border-top: 5px solid #CE993D;
-    width: 60%;
-    width: 90%;
+    width: 240px;
     margin-left: 10px;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.953);
+}
+
+.begin-bttn {
+    position: fixed;
+    right: 30px;
+    bottom: 105px;
 }
 
 #beginbttn {
     margin: 0 120px;
-    border-radius: 20px;
     height: 80px;
-    background: #9d9b9b;             
-    color: black;
-    font-family: Arcade;
-    padding: 10px 20px;
-    border: 2px solid rgb(216, 215, 215);
-    font-size: 40px;
+    width: 190px;
+    background-image: url('../images/button-bg.png');
+    background-size: 120% 120%;
+    background-position-y: -10px;
+    background-position-x: -20px;
+    border-radius: 25px;
+    border: none;
+    font-family: Press;
+    font-size: 20px;
     cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 0px 6px 1px #555454;
-    transition: box-shadow .05s, margin-top .05s;
 }
 
-#beginbttn:active {
-    box-shadow: none;
-    margin-top: 5px;
-    color: #FFB842;
-}
+
 
 .black-screen {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.437);
-    top:0;
+    top: 0;
     backdrop-filter: blur(4px);
     height: 100vh;
     width: 100vw;
@@ -100,12 +109,12 @@ input {
 }
 
 .black-screen.show {
-   opacity: 1;
+    opacity: 1;
 }
 
 .alert-screen {
     position: absolute;
-    top:30%;
+    top: 30%;
     background-color: rgb(224, 219, 219);
     height: 38vh;
     width: 30vw;
@@ -114,12 +123,12 @@ input {
     pointer-events: none;
     transition: opacity .5s;
     border-radius: 20px;
-    font-family: Arcade;
+    font-family: Press;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 20px;
     text-align: justify;
     padding: 20px;
 }
@@ -133,9 +142,9 @@ input {
     margin: 0 120px;
     border-radius: 20px;
     height: 40px;
-    background: #9d9b9b;             
+    background: #9d9b9b;
     color: black;
-    font-family: Arcade;
+    font-family: Press;
     padding: 10px 20px;
     border: 2px solid rgb(216, 215, 215);
     font-size: 20px;
@@ -152,5 +161,5 @@ input {
 }
 
 #beginbttn.load {
-    cursor:wait;
+    cursor: wait;
 }
