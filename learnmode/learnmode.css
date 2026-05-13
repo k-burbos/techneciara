@@ -1,0 +1,111 @@
+.logo {
+    border-bottom: 4px solid rgb(0, 0, 0);
+    background-image: url('../images/clouds.png');
+    background-size: 100% 100%;
+}
+
+@font-face {
+    font-family: Press;
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    overflow: hidden;
+}
+
+.bottombar {
+    position: fixed;
+    border: 2px solid black;
+    bottom: 10px;
+    height: 8vh;
+    width: 100vw;
+    background-color: white;
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.game,
+.addagame,
+.searchagame,
+.community {
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+    margin-left: 160px;
+}
+
+.icon {
+    height: 10.5vh;
+    cursor: pointer;
+}
+
+.excepticon {
+    margin-top: 15px;
+    height: 14vh;
+    cursor: pointer;
+}
+
+.learntitle {
+    width:100%;
+    font-size: 40px;
+    display: flex;
+    color: #0D3316;
+    font-weight: bold;
+    margin-top:20px;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bodyoflinks {
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainbody {
+    height: 100vh;
+}
+
+.linkelearn {
+    height:40vh;
+    width:50%;
+    font-family: Press;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    height:40vh;
+    width:50%;
+    font-family: Press;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleElearn {
+    justify-content: center;
+    display: flex;
+    font-size:20px;
+    width:40%;
+    margin-top:16px;
+    text-align: center;
+}
+
+.line {
+    height: 4px;
+    background-color: black;
+    margin: 20px 30px;
+    width:15vw;
+}
